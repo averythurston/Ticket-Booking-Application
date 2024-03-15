@@ -1,0 +1,6 @@
+mvn archetype:generate ^
+	-DgroupId=com.ontariotechu.sofe3980U ^
+	-DartifactId=TicketBookingWebapp ^
+	-Dversion=1.0.0 ^
+	-DarchetypeArtifactId=maven-archetype-webapp ^
+	-DinteractiveMode=false
