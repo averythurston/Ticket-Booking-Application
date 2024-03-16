@@ -1,4 +1,0 @@
-Origin,Destination,DepartureTime,ArrivalTime,FlightType
-Toronto,Vancouver,2024-03-16T08:00:00,2024-03-16T11:00:00,direct
-Vancouver,Toronto,2024-03-16T12:00:00,2024-03-16T15:00:00,direct
-Montreal,Ottawa,2024-03-16T14:00:00,2024-03-16T17:00:00,direct
