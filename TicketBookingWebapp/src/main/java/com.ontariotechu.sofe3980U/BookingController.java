@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.time.Duration;
 
-@Controller
+
 public class BookingController {
 
     @GetMapping("/")
@@ -64,7 +64,7 @@ public class BookingController {
             flight.setTotalFlightTime(calculateTotalFlightTime(flight.getDepartureTime(), flight.getArrivalTime()));
         }
     }
-    
+
     public String calculateTotalFlightTime(LocalDateTime departureTime, LocalDateTime arrivalTime) {
         Duration duration = Duration.between(departureTime, arrivalTime);
         long hours = duration.toHours();
@@ -93,7 +93,7 @@ public static class Flight {
     private String flightType;
     private String formattedDepartureTime;
     private String formattedArrivalTime;
-    private String totalFlightTime; 
+    private String totalFlightTime;
 
     public Flight(String origin, String destination, LocalDateTime departureTime, LocalDateTime arrivalTime, String flightType) {
         this.origin = origin;
