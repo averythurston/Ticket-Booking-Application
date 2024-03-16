@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Booking Site</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #666;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+        nav a:hover {
+            color: #ffd700;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        form {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        input[type="date"], input[type="time"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Airport Booking Site</h1>
+    </header>
+    <div class="container">
+        <h2>Book a Flight</h2>
+        <form action="/search" method="post">
+            <label for="origin">Origin:</label>
+            <select id="origin" name="origin">
+                <option value="Toronto">Toronto</option>
+                <option value="Montreal">Montreal</option>
+                <option value="Ottawa">Ottawa</option>
+                <option value="Vancouver">Vancouver</option>
+            </select>
+
+            <label for="destination">Destination:</label>
+            <select id="destination" name="destination">
+                <option value="Toronto">Toronto</option>
+                <option value="Montreal">Montreal</option>
+                <option value="Ottawa">Ottawa</option>
+                <option value="Vancouver">Vancouver</option>
+            </select>
+
+            <label for="trip-type">Trip Type:</label>
+            <select id="trip-type" name="trip-type">
+                <option value="one-way">One Way</option>
+                <option value="round-trip">Round Trip</option>
+            </select>
+
+            <label for="flight-type">Flight Type:</label>
+            <select id="flight-type" name="flight-type">
+                <option value="direct">Direct</option>
+                <option value="multi-stop">Multi-Stop</option>
+            </select>
+
+            <label for="ticket-format">Ticket Format:</label>
+            <select id="ticket-format" name="ticket-format">
+                <option value="12-hour">12-Hour</option>
+                <option value="24-hour">24-Hour</option>
+            </select>
+
+            <input type="submit" value="Search Flights">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Search Results</title>
+</head>
+<body>
+    <h1>Flight Search Results</h1>
+    
+    <!-- Check if there are flights to display -->
+    <div th:if="${flights != null and not #lists.isEmpty(flights)}">
+        <table>
+            <thead>
+                <tr>
+                    <th>Origin</th>
+                    <th>Destination</th>
+                    <th>Departure Time</th>
+                    <th>Arrival Time</th>
+                    <th>Total Flight Time</th>
+                    <th>Flight Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Iterate over the list of flights and display each flight's details -->
+                <tr th:each="flight : ${flights}">
+                    <td th:text="${flight.origin}"></td>
+                    <td th:text="${flight.destination}"></td>
+                    <td th:text="${flight.formattedDepartureTime}"></td>
+                    <td th:text="${flight.formattedArrivalTime}"></td>
+                    <td th:text="${flight.totalFlightTime}"></td>
+                    <td th:text="${flight.flightType}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Display a message if no flights were found -->
+    <div th:if="${flights == null or #lists.isEmpty(flights)}">
+        <p>No flights found.</p>
+    </div>
+</body>
+</html>
