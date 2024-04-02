@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.time.Duration;
 
 
@@ -54,9 +55,9 @@ public class BookingController {
     public void formatFlightTimes(List<Flight> flights, String ticketFormat) {
         DateTimeFormatter formatter;
         if (ticketFormat.equals("12-hour")) {
-            formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd hh:mm a");
+            formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd hh:mm a", Locale.CANADA);
         } else {
-            formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm");
+            formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm", Locale.CANADA);
         }
         for (Flight flight : flights) {
             flight.setFormattedDepartureTime(flight.getDepartureTime().format(formatter));
