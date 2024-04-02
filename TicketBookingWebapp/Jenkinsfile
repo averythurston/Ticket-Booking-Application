@@ -1,14 +1,14 @@
 pipeline {
  environment {
-    PROJECT = credentials('project_id') // secret text for the project id. I set it manually in Jenkins credentials
-    APP_NAME = "ticketbookingwebapp"
-    CLUSTER = credentials("cluster_name") // secret text for the cluster name. I set it manually in Jenkins credentials
-    CLUSTER_ZONE = credentials("cluster_zone") // secret text for the cluster zone. I set it manually in Jenkins credentials
-    REPO_PATH= credentials("repo_path") // secret text for the repo path. I set it manually in Jenkins credentials
+    PROJECT = credentials('project_id')
+    APP_NAME = "TicketBookingWebapp"
+    CLUSTER = credentials("cluster_name")
+    CLUSTER_ZONE = credentials("cluster_zone")
+    REPO_PATH= "https://github.com/averythurston/Ticket-Booking-Application"
     IMAGE_TAG = "$REPO_PATH/${APP_NAME}"
-    SERVICE_ACCOUNT= "new-jenkins-key.json"    // secret file for the GCP credential JSON file. I set it manually in Jenkins credentials
+    SERVICE_ACCOUNT= "new-jenkins-key.json"
   }
-    agent{   // create a node under the name gcloud that running google/cloud-sdk:latest docker image
+    agent{
         kubernetes {
       label 'ticket-booking-app'
       yaml """
