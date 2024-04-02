@@ -5,7 +5,7 @@ pipeline {
     CLUSTER = credentials("cluster_name")
     CLUSTER_ZONE = credentials("cluster_zone")
     REPO_PATH= "https://github.com/averythurston/Ticket-Booking-Application"
-    IMAGE_TAG = "$REPO_PATH/${APP_NAME}"
+    IMAGE_TAG = "$REPO_PATH/TicketBookingWebapp"
     SERVICE_ACCOUNT= "new-jenkins-key.json"
   }
     agent{
