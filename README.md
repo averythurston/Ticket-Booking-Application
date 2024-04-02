@@ -1,4 +1,4 @@
-# Ticket-Booking-Application
+# Ticket Booking Application
 To Set Up Enviornment:
 1. Download Repository
 2. Generate the project by copying create.txt into the command line
