@@ -1,7 +1,7 @@
 pipeline {
  environment {
     PROJECT = credentials('project_id')
-    APP_NAME = "TicketBookingWebapp"
+    APP_NAME = "ticketbookingwebapp"
     CLUSTER = credentials("cluster_name")
     CLUSTER_ZONE = credentials("cluster_zone")
     REPO_PATH= "https://github.com/averythurston/Ticket-Booking-Application"
