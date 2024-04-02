@@ -39,7 +39,7 @@ spec:
         }
         stage('build'){
             steps{
-                sh 'mvn spring-boot:run -DskipTests -f ./TicketBookingWebapp/pom.xml'
+                sh 'mvn package -DskipTests -f ./TicketBookingWebapp/pom.xml'
             }
         }
         stage('containerize'){
